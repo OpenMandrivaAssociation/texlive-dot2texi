@@ -1,3 +1,9 @@
+# revision 15878
+# category Package
+# catalog-ctan /macros/latex/contrib/dot2texi
+# catalog-date 2009-02-28 02:19:00 +0100
+# catalog-license gpl
+# catalog-version 3.0
 Name:		texlive-dot2texi
 Version:	3.0
 Release:	1
@@ -51,6 +57,7 @@ package. The process is automated if shell escape is enabled.
 %doc %{_texmfdistdir}/doc/latex/dot2texi/examples/docgraphs.tex
 %doc %{_texmfdistdir}/doc/latex/dot2texi/examples/docgraphsorig.pdf
 %doc %{_texmfdistdir}/doc/latex/dot2texi/gpl.txt
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -61,3 +68,5 @@ package. The process is automated if shell escape is enabled.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
