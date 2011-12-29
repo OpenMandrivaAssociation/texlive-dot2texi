@@ -17,8 +17,6 @@ BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
 Requires(post):	texlive-kpathsea
-Conflicts:	texlive-texmf <= 20110705-3
-Conflicts:	texlive-doc <= 20110705-3
 
 %description
 The dot2texi package allows you to embed graphs in the DOT
@@ -28,20 +26,12 @@ transform the output from Graphviz to LaTeX code. The generated
 code relies on the TikZ and PGF package or the PSTricks
 package. The process is automated if shell escape is enabled.
 
-%pre
-    %_texmf_mktexlsr_pre
-
 %post
-    %_texmf_mktexlsr_post
-
-%preun
-    if [ $1 -eq 0 ]; then
-	%_texmf_mktexlsr_pre
-    fi
+    %{_sbindir}/texlive.post
 
 %postun
     if [ $1 -eq 0 ]; then
-	%_texmf_mktexlsr_post
+	%{_sbindir}/texlive.post
     fi
 
 #-----------------------------------------------------------------------
@@ -58,7 +48,6 @@ package. The process is automated if shell escape is enabled.
 %doc %{_texmfdistdir}/doc/latex/dot2texi/examples/docgraphs.tex
 %doc %{_texmfdistdir}/doc/latex/dot2texi/examples/docgraphsorig.pdf
 %doc %{_texmfdistdir}/doc/latex/dot2texi/gpl.txt
-%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -69,5 +58,3 @@ package. The process is automated if shell escape is enabled.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc %{buildroot}%{_texmfdistdir}
-mkdir -p %{buildroot}%{_tlpkgobjdir}
-cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
