@@ -1,4 +1,4 @@
-# revision 15878
+# revision 26237
 # category Package
 # catalog-ctan /macros/latex/contrib/dot2texi
 # catalog-date 2009-02-28 02:19:00 +0100
@@ -6,7 +6,7 @@
 # catalog-version 3.0
 Name:		texlive-dot2texi
 Version:	3.0
-Release:	2
+Release:	3
 Summary:	Create graphs within LaTeX using the dot2tex tool
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/dot2texi
