@@ -58,3 +58,21 @@ package. The process is automated if shell escape is enabled.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc %{buildroot}%{_texmfdistdir}
+
+
+%changelog
+* Mon Jun 11 2012 Paulo Andrade <pcpa@mandriva.com.br> 3.0-3
++ Revision: 804566
+- Update to latest release.
+
+* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 3.0-2
++ Revision: 751013
+- Rebuild to reduce used resources
+
+* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 3.0-1
++ Revision: 718248
+- texlive-dot2texi
+- texlive-dot2texi
+- texlive-dot2texi
+- texlive-dot2texi
+
