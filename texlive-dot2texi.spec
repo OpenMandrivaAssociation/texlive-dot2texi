@@ -1,6 +1,6 @@
 Name:		texlive-dot2texi
 Version:	26237
-Release:	1
+Release:	2
 Summary:	Create graphs within LaTeX using the dot2tex tool
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/dot2texi
