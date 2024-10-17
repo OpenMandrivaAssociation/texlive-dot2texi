@@ -3,7 +3,7 @@ Version:	26237
 Release:	2
 Summary:	Create graphs within LaTeX using the dot2tex tool
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/dot2texi
+URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/dot2texi
 License:	GPL
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/dot2texi.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/dot2texi.doc.r%{version}.tar.xz
